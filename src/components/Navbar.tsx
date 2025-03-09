@@ -150,7 +150,7 @@ export default function Navbar() {
           </Button>
       </DialogTrigger>
       <DialogContent className="w-[300px] top-85 -mx-25   ">
-      <form action="">
+      <form action="" className="w-full">
 <DialogHeader>
           <DialogTitle>Texnik qo`llab quvvatlash markazi</DialogTitle>
           <DialogDescription>
