@@ -149,7 +149,7 @@ export default function Navbar() {
             Murojat qoldirish
           </Button>
       </DialogTrigger>
-      <DialogContent className="w-[320px] top-85 -mx-25   ">
+      <DialogContent className="w-[70%] top-85 -mx-[12%]   ">
       <form action="" className="w-full">
 <DialogHeader>
           <DialogTitle>Texnik qo`llab quvvatlash markazi</DialogTitle>
