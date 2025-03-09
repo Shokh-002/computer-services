@@ -77,18 +77,18 @@ export default function ArticlesPage() {
 
   return (
     <section className="container  py-12">
-    <div className='flex justify-between'>
-    <h1 className="text-3xl mx-14 ">MAQOLALAR</h1>
+    <div className=' mx-14 md:mx-2'>
+    <h1 className="tex-sm sm:text-3xl mx-14  my-auto ">MAQOLALAR</h1>
       {visibleCount < articles.length && (
-        <div className="justify-between flex">
+        <div className=" justify-end flex w-full -px-24 -mx-25  md:mx-2">
                 
-                <Button variant="outline" className='mr-14' onClick={loadMore}>Barcha maqolalarni ko`rish</Button>
+                <Button variant="outline" className='  md:mr-16' onClick={loadMore}>Barcha maqolalarni ko`rish</Button>
         </div>
       )}
       </div>
       <motion.div
         style={{ y: parallaxY }}
-        className="mx-16 -my-16 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+        className="mx-13 w-fit md:mx-16 -my-16 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
       >
         {articles.slice(0, visibleCount).map((article, idx) => (
           <motion.div
@@ -112,7 +112,7 @@ export default function ArticlesPage() {
 {article.tag&&(<span className="text-white text-xs w-1/5 text-center h-fit bg-transparent  px-2 py-1 border rounded-full">
                   {article.tag}
                 </span>)}
-              <CardContent className="p-4 bg-transparent text-primary-foreground">
+              <CardContent className="p-4 -mx-2 bg-transparent text-primary-foreground">
                 <h3 className="text-lg font-semibold">{article.title}</h3>
                 {article.description && <p className="text-sm mt-2">{article.description}</p>}
                 <p className="text-xs mt-4 opacity-70">{article.date}</p>
