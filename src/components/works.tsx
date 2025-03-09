@@ -63,7 +63,7 @@ export default function Services() {
             alt={service.title}
             width={380}
             height={240}
-            className="object-cover rounded-xl"
+            className="object-cover md:mb-11 rounded-xl"
           />
         </CardHeader>
         <CardContent className="text-white w-full flex flex-col p-6">
