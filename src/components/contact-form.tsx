@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
-
+import Image from 'next/image';
 export default function ContactForm() {
   return (
     <div className="flex flex-col md:flex-row border border-solid my-8 rounded-lg p-6 md:p-10 max-w-full mx-4 border-blue-950 bg-white shadow-lg">
@@ -34,10 +34,12 @@ export default function ContactForm() {
           <div className="flex items-center gap-2 border w-1/3 px-2">
             <Checkbox id="captcha" />
             <label htmlFor="captcha" className="text-sm">Men robot emasman</label>
-            <img
+            <Image
   src="/logos_recaptcha.svg"
   alt="reCAPTCHA"
   className="w-10 h-10"
+  width={10}
+  height={10}
 />
           </div>
           <Button className="w-full bg-blue-600 hover:bg-blue-700">Jo’natish</Button>

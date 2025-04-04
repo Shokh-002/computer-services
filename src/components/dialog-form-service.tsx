@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -12,7 +11,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Checkbox } from '@/components/ui/checkbox';
-
+import Image from 'next/image';
 export function DialogDemo() {
   return (
     <Dialog>
@@ -61,10 +60,12 @@ export function DialogDemo() {
         <div className="flex items-center gap-2 h-16 border w-[59%] px-2 my-2">
             <Checkbox id="captcha" />
             <label htmlFor="captcha" className="text-sm text-white">Men robot emasman</label>
-            <img
+            <Image
   src="/logos_recaptcha.svg"
   alt="reCAPTCHA"
   className="w-10 h-10"
+  width={10}
+  height={10}
 />
           </div>
           

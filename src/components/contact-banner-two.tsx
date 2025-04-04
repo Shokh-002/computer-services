@@ -109,9 +109,11 @@ export default function ContactSectionTwo() {
       >
         Men robot emasman
       </label>
-      <img
+      <Image
   src="/logos_recaptcha.svg"
   alt="reCAPTCHA"
+  width={10}
+  height={10}
   className="w-10 h-10"
 />
 
