@@ -47,7 +47,7 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="container w-full py-10">
+    <div className="container w-full py-10" id="work">
   <h2 className="mb-8 text-3xl font-bold text-center text-[#00205B]">
     BIZ BOSHQALARGA QARAGANDA YAXSHIROQ ISH QILA OLAMIZ
   </h2>

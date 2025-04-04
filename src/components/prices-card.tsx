@@ -6,41 +6,49 @@ const services = [
     title: "Windows o'rnatish",
     price: "56 000 so'm dan",
     image: "/images/windows.png",
+    link: "/install-win",
   },
   {
     title: "Hotiradagi ochib ketgan ma'lumotlarni tiklash",
     price: "56 000 so'm dan",
     image: "/images/hdd.png",
+    link: "/recover-data/",
   },
   {
     title: "Kompyuter sozlamalari",
     price: "56 000 so'm dan",
     image: "/images/pc.png",
+    link:"/computer-setting",
   },
   {
     title: "Termopastani yangilash",
     price: "56 000 so'm dan",
     image: "/images/fan.png",
+    link:"/therma-past/",
   },
   {
     title: "Grafik kartani ta'mirlash",
     price: "56 000 so'm dan",
     image: "/images/gpu.png",
+    link:"/video-card/",
   },
   {
     title: "Komponentlarni modernizatsiya qilish",
     price: "56 000 so'm dan",
     image: "/images/motherboard.png",
+    link:"/modernization/",
   },
   {
     title: "Antivirus o'rnatish",
     price: "56 000 so'm dan",
     image: "/images/antivirus.png",
+    link:"install-antivirus/",
   },
   {
     title: "Quvvat manbaini almashtirish",
     price: "56 000 so'm dan",
     image: "/images/psu.png",
+    link:"charging-swap/",
   },
 ];
 
@@ -62,9 +70,15 @@ export default function Services() {
                 <p className="text-sm mb-4">{service.price}</p>
               </div>
              <div className=" flex min-h-auto h-40 md:h-46 p-0 pt-4 pl-0  w-full ">
-             <Link href="./pages/home" className="mt-24 w-20 text-lime-400  text-sm font-medium flex items-center gap-1">
-                Batafsil →
-              </Link>
+             {service?.link && (
+  <Link
+    href={service.link}
+    className="mt-24 text-lime-400 text-sm font-medium flex items-center gap-1"
+  >
+    Batafsil →
+  </Link>
+)}
+
               <Image
                 src={service.image}
                 alt={service.title}

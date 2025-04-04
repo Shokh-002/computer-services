@@ -12,6 +12,7 @@ import { Input } from "./ui/input";
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 import { Textarea } from "./ui/textarea";
 import { Checkbox } from "./ui/checkbox";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,14 +29,15 @@ export default function Navbar() {
       <div className="mt-2 mx-9.5"><Separator/></div>        
 
       <div className="flex justify-between items-center px-4 py-3 ">
-        <div className="text-xl font-bold mx-6">Logo</div>
+        <div className="text-xl font-bold mx-6"><Link href="/">Logo</Link></div>
 
         <nav className="hidden mr-auto ml-16 ms-0 md:flex my-0 gap-6">
-          <a href="#" className="hover:text-gray-400">Xizmatlar</a>
-          <a href="#" className="hover:text-gray-400">Narxlar</a>
-          <a href="#" className="hover:text-gray-400">Biz haqimizda</a>
-          <a href="#" className="hover:text-gray-400">Biz qanday ishlaymiz</a>
-        </nav>
+      <Link href="/services-page" className="hover:text-gray-400">Xizmatlar</Link>
+      <Link href="/prices/" className="hover:text-gray-400">Narxlar</Link>
+      <Link href="/about-us" className="hover:text-gray-400">Biz haqimizda</Link>
+      <Link href="how-we-work/" className="hover:text-gray-400">Biz qanday ishlaymiz</Link>
+      <Link href="/contact" className="hover:text-gray-400">Biz bilan bog‘lanish</Link>
+    </nav>
 
         <div className="flex items-center gap-4">
         <CustomGoogleTranslate/>
@@ -46,8 +48,8 @@ export default function Navbar() {
             Murojat qoldirish
           </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]  top-37   my-37 md:mx-135">
-<form action="">
+      <DialogContent className=" sm:max-w-[425px] md:w-full  top-37   my-37 md:mx-135">
+<form  action="">
 <DialogHeader>
           <DialogTitle>Texnik qo`llab quvvatlash markazi</DialogTitle>
           <DialogDescription>
@@ -57,7 +59,7 @@ export default function Navbar() {
           
         <div className="grid w-full mx-1 max-w-sm items-center gap-1.5">
       <Label htmlFor="name">Email *</Label>
-      <Input type="name" id="name" placeholder="Ismingiz" required />
+      <Input className="w-1/2 md:w-full" type="name" id="name" placeholder="Ismingiz" required />
     </div>
 
           <div className="grid w-full mx-1 max-w-sm items-center gap-1.5">
@@ -95,22 +97,15 @@ export default function Navbar() {
       <Label htmlFor="message">Izoh *</Label>
       <Textarea placeholder="Muammoni batafsil yozing" id="message" />
     </div>
-    <div className="flex items-center space-x-2">
-      <Checkbox id="terms" required />
-      <label
-        htmlFor="terms"
-        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-      >
-        Men robot emasman
-      </label>
-      <img
+    <div className="flex items-center gap-2 border w-[75%] px-2">
+            <Checkbox id="captcha" />
+            <label htmlFor="captcha" className="text-sm">Men robot emasman</label>
+            <img
   src="/logos_recaptcha.svg"
   alt="reCAPTCHA"
   className="w-10 h-10"
 />
-
-
-    </div>
+          </div>
     <h6 className="text-sm">&quot;Ariza yuborish&quot; tugmasini bosish orqali siz shaxsiy ma`lumotlarni qayta ishlashga roziligingizni tasdiqlaysiz</h6>
           </div>
           
@@ -138,18 +133,19 @@ export default function Navbar() {
 
       {isOpen && (
         <div className="md:hidden flex flex-col gap-4 px-4 pb-4">
-          <a href="#" className="hover:text-gray-400">Xizmatlar</a>
-          <a href="#" className="hover:text-gray-400">Narxlar</a>
-          <a href="#" className="hover:text-gray-400">Biz haqimizda</a>
-          <a href="#" className="hover:text-gray-400">Biz qanday ishlaymiz</a>
+          <Link href="/services-page" className="hover:text-gray-400">Xizmatlar</Link>
+      <Link href="/prices/" className="hover:text-gray-400">Narxlar</Link>
+      <Link href="/about-us" className="hover:text-gray-400">Biz haqimizda</Link>
+      <Link href="#work" className="hover:text-gray-400">Biz qanday ishlaymiz</Link>
+      <Link href="/contact" className="hover:text-gray-400">Biz bilan bog‘lanish</Link>
           
           <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" className="rounded-full bg-transparent border-gray-600 text-white w-full">
+        <Button variant="outline" className="items-center rounded-full bg-transparent border-gray-600 text-white w-full">
             Murojat qoldirish
           </Button>
       </DialogTrigger>
-      <DialogContent className="w-[70%] top-85 -mx-[12%]   ">
+      <DialogContent className=" w-[70%] top-85 -mx-[12%] ">
       <form action="" className="w-full">
 <DialogHeader>
           <DialogTitle>Texnik qo`llab quvvatlash markazi</DialogTitle>
@@ -160,7 +156,7 @@ export default function Navbar() {
           
         <div className="grid w-full mx-1 max-w-sm items-center gap-1.5">
       <Label htmlFor="name">Email *</Label>
-      <Input type="name" id="name" placeholder="Ismingiz" required />
+      <Input  type="name" id="name" placeholder="Ismingiz" required />
     </div>
 
           <div className="grid w-full mx-1 max-w-sm items-center gap-1.5">
@@ -171,7 +167,6 @@ export default function Navbar() {
             type="phone"
               id="phone"
               placeholder="+998"
-              className="col-span-3"
               required
               maxLength={13}
             />

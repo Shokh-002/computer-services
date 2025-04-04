@@ -38,7 +38,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "node_modules/.tsr/**/*"
-  ],
+, "src/app/how-we-work"  ],
   "exclude": [
     "node_modules"
   ]

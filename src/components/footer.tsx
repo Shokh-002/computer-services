@@ -4,7 +4,7 @@ import { FaPhone, FaClock, FaTelegramPlane, FaInstagram, FaYoutube } from "react
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-[#05235B] to-[#000505] text-white py-10 px-5">
+    <footer className="my-2 bg-gradient-to-r from-[#05235B] to-[#000505] text-white py-10 px-5">
       <div className="max-w-7xl mx-14 grid grid-cols-1 md:grid-cols-3 gap-8">
         
         {/* Location */}
@@ -27,27 +27,27 @@ export default function Footer() {
           <h2 className="text-xl font-semibold mb-4">Asosiy</h2>
           <ul className="space-y-2 text-gray-300">
             <li>
-              <Link href="/services" className="hover:text-white transition">
+              <Link href="/services-page/" className="hover:text-white transition">
                 Xizmatlar
               </Link>
             </li>
             <li>
-              <Link href="/prices" className="hover:text-white transition">
+              <Link href="/prices/" className="hover:text-white transition">
                 Narxlar
               </Link>
             </li>
             <li>
-              <Link href="/reviews" className="hover:text-white transition">
+              <Link href="/reviews/" className="hover:text-white transition">
                 Sharhlar
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-white transition">
+              <Link href="/about-us/" className="hover:text-white transition">
                 Biz haqimizda
               </Link>
             </li>
             <li>
-              <Link href="/process" className="hover:text-white transition">
+              <Link href="#work" className="hover:text-white transition">
                 Biz qanday ishlaymiz
               </Link>
             </li>
